@@ -5,3 +5,31 @@
 .error {
     border: 1px solid red;
 }
+
+.HomeWork3 {
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #48403b;
+    border-radius: 20px;
+}
+
+.Greeting__Container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.Greeting__btn {
+    background-color: transparent;
+    border: 2px solid #48403b;
+    color: #48403b;
+    border-radius: 20px;
+    padding: 8px 5px;
+}
+
+.Greeting__inpt {
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 7px 0px;
+}

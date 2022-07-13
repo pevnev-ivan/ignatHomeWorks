@@ -16,7 +16,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [error, setError] = useState<any>('') // need to fix any
 
     const setNameCallback = (e: any) => { // need to fix any
-        setName('') // need to fix
+        setName(name) // need to fix
+
     }
     const addUser = () => {
         alert(`Hello  !`) // need to fix
