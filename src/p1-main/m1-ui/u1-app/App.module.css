@@ -1,0 +1,14 @@
+*{
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+.App {
+    background: #dfcdc3;
+}
+
+h1 {
+    text-align: center;
+    color: #48403b;
+}
