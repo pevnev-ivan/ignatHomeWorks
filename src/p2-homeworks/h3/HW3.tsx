@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import GreetingContainer from './GreetingContainer'
 import s from './Greeting.module.css'
+import {v1} from "uuid"
+
 // types
 export type UserType = {
-    _id: number
+    _id: string
     name: string
 }
 
@@ -11,10 +13,16 @@ export type UserType = {
 function HW3() {
     const [users, setUsers] = useState<any>([]) // need to fix any
 
-    const addUserCallback = (name: string) => { // need to fix any
-        setUsers([]) // need to fix
+    const addUserCallback = (name: string) => {
+        const newUser: UserType =
+            {
+                _id: v1(),
+                name: name
+            }
+        setUsers([newUser, ...users])
     }
 
+    console.log(users)
     return (
         <div >
             <h1>HomeWork 3</h1>
