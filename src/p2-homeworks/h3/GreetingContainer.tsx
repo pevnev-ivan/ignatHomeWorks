@@ -23,7 +23,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
     }
     const addUser = () => {
-        if (name.trim() == '') {
+        if (name.trim() === '') {
             setError(false)
             alert('Name should contain characters')
             return

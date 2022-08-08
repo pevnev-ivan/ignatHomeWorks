@@ -32,7 +32,7 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): a
 
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): any => { // need to fix any
     return (
-        affairs.filter(affair => affair._id != _id)
+        affairs.filter(affair => affair._id !== _id)
     )
 }
 

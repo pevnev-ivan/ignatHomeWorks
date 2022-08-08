@@ -16,11 +16,11 @@ type GreetingPropsType = {
 const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers, users, onKeyAddUser} // деструктуризация пропсов
 ) => {
-    const inputClass = error == true ? s.Greeting__inpt : s.error // need to fix with (?:)
+    const inputClass = error ? s.Greeting__inpt : s.error // need to fix with (?:)
 
     const usersList = users.map((objFromUser: { name: React.ReactNode }, index: any) => {
         return (
-            <div>
+            <div id={index}>
                 {objFromUser.name}
             </div>
         )
