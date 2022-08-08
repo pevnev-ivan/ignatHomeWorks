@@ -3,7 +3,14 @@
 }
 
 .error {
-    border: 1px solid red;
+    background-color: #b2928e;
+    border-radius: 20px;
+
+    outline: none;
+    padding: 7px 15px;
+    font-size: 20px;
+    border: 2px solid #af5549;
+
 }
 
 .HomeWork3 {
@@ -30,9 +37,13 @@
 }
 
 .Greeting__inpt {
-    background-color: transparent;
+    background-color: #bbaba2;
     border-radius: 20px;
-    padding: 7px 10px;
+    border-color: #48403b;
+    outline: none;
+    padding: 7px 15px;
+    font-size: 20px;
+
 }
 
 .Users__list{

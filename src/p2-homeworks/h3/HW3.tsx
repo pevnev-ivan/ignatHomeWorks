@@ -3,7 +3,7 @@ import GreetingContainer from './GreetingContainer'
 import s from './Greeting.module.css'
 import {v1} from "uuid"
 
-// types
+
 export type UserType = {
     _id: string
     name: string
@@ -11,7 +11,7 @@ export type UserType = {
 
 // уровень работы с глобальными данными
 function HW3() {
-    const [users, setUsers] = useState<any>([]) // need to fix any
+    const [users, setUsers] = useState<Array<UserType>>([])
 
     const addUserCallback = (name: string) => {
         const newUser: UserType =
@@ -22,20 +22,15 @@ function HW3() {
         setUsers([newUser, ...users])
     }
 
-    console.log(users)
     return (
-        <div >
+        <div>
             <h1>HomeWork 3</h1>
-    <div className={s.HomeWork3}>
+            <div className={s.HomeWork3}>
 
+                <GreetingContainer users={users} addUserCallback={addUserCallback}/>
+                {/*<AlternativeGreeting/>*/}
 
-            {/*should work (должно работать)*/}
-            <GreetingContainer users={users} addUserCallback={addUserCallback}/>
-
-
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeGreeting/>*/}
-    </div>
+            </div>
         </div>
     )
 }

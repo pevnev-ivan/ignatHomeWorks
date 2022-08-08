@@ -1,36 +1,45 @@
-import React, {ChangeEvent, useState} from 'react'
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from "./HW3";
 
 type GreetingContainerPropsType = {
-    users: Array<UserType> // need to fix any
-    addUserCallback: any // need to fix any
+    users: Array<UserType>
+    addUserCallback: (name: string) => void
 }
 
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
+// более простой и понятный вариант
+// function GreetingContainer(props: GreetingPropsType) {...}
 
-// более современный и удобный для про :)
+
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+    const [name, setName] = useState<string>('')
+    const [error, setError] = useState<boolean>(true)
 
-    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any  +
-        setName(e.currentTarget.value) // need to fix   +
+    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
+        setError(true)
+        setName(e.currentTarget.value)
+
+
     }
     const addUser = () => {
         if (name.trim() == '') {
-            alert ('Name can not be empty')
+            setError(false)
+            alert('Name should contain characters')
             return
         }
         addUserCallback(name)
-        alert ('Hello, ' + name + '!')
+        alert('Hello, ' + name + '!')
+        setName('')
     }
 
+    const onKeyAddUser = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            addUser()
+        }
+    }
 
-    const totalUsers = users.length // need to fix
-
+    const totalUsers = users.length
 
     return (
         <Greeting
@@ -40,6 +49,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             error={error}
             totalUsers={totalUsers}
             users={users}
+            onKeyAddUser={onKeyAddUser}
         />
     )
 }
