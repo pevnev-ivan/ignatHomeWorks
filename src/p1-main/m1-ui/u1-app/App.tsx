@@ -6,15 +6,15 @@ import HW3 from "../../../p2-homeworks/h3/HW3";
 
 function App() {
     return (
-        // <body className={s.App}>
-        <>
+        <body className={s.App}>
+
             <HW1/>
             <HW2/>
             <HW3/>
             {/*<HW4/>*/}
             {/*<HW5/>*/}
 
-        </>
+        </body>
     )
 }
 

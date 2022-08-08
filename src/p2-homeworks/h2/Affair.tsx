@@ -13,11 +13,23 @@ function Affair(props: AffairPropsType) {
         props.deleteAffairCallback(props._id)
     }// need to fix
 
+    const priorityRender = () => {
+        switch (props.priority) {
+            case 'high':
+                return (<span className={s.affair__element_priority} style={{opacity: '1', color: '#d15a84' }}> ● </span>)
+            case 'middle':
+                return (<span className={s.affair__element_priority} style={{opacity: '0.5', color: '#b358aa' }}> ● </span>)
+            default:
+                return (<span className={s.affair__element_priority}style={{opacity: '0.2', color: '#a781e1'}}> ● </span>)
+        }
+    }
+
     return (
         < >
             <ul>
                 <li className={s.affair__element}>
                     <span className={s.affair_text}>{props.affair}</span>
+                    {priorityRender()}
                     <button className={s.affair__btn} onClick={deleteCallback}>X</button>
                 </li>
             </ul>

@@ -16,7 +16,7 @@
     display: flex;
     list-style-type: none;
     justify-content: space-between;
-    gap: 60px;
+
 }
 
 .affair__btn {
@@ -28,7 +28,13 @@
 }
 
 .affair_text {
-    align-self: center;
+
+}
+
+.affair__element_priority{
+    margin-left: auto;
+    margin-right: 10px;
+
 
 }
 
