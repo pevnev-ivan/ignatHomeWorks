@@ -3,7 +3,7 @@ import Message from "./Message";
 import style from './Message.module.css'
 
 const messageData = {
-    avatar: 'https://pbs.twimg.com/profile_images/1459434196888399874/ZA_NMTCV_400x400.jpg',
+    avatar: 'https://media-exp1.licdn.com/dms/image/C4D03AQHatQc4YtAArw/profile-displayphoto-shrink_200_200/0/1636134399713?e=2147483647&v=beta&t=PI4qs9XPK0_UpIxqIF-8l70V91PwArDwF8Yr__WmCvo',
     name: 'Kyojuro Rengoku',
     message: 'Mune o hatte ikiro',
     time: '22:00',

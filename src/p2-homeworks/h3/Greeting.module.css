@@ -3,13 +3,13 @@
 }
 
 .error {
-    background-color: #b2928e;
+    background: #cd8078;
     border-radius: 20px;
 
     outline: none;
     padding: 7px 15px;
     font-size: 20px;
-    border: 2px solid #af5549;
+    border: 2px solid black;
 
 }
 
@@ -34,6 +34,10 @@
     color: #48403b;
     border-radius: 20px;
     padding: 8px 5px;
+}
+
+.Greeting__btn:disabled {
+   opacity: 40%;
 }
 
 .Greeting__inpt {

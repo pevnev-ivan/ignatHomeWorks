@@ -1,16 +1,17 @@
 import React, {ChangeEvent, useState} from 'react'
 import SuperInputText from './common/c1-SuperInputText/SuperInputText'
 import s from './HW4.module.css'
+import f from '../h3/Greeting.module.css'
 import SuperButton from './common/c2-SuperButton/SuperButton'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'Error!'
 
     const showAlert = () => {
         if (error) {
-            alert('введите текст...')
+            alert('Введите текст...')
         } else {
             alert(text) // если нет ошибки показать текст
         }
@@ -21,8 +22,8 @@ function HW4() {
 
     return (
         <div>
-            <hr/>
-            homeworks 4
+
+            <h1>HomeWork 4</h1>
 
             <div className={s.column}>
                 <SuperInputText
@@ -30,28 +31,33 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    className={f.Greeting__inpt}
+                    spanClassName={s.testSpanError}
                 />
 
                 <SuperInputText
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={f.Greeting__inpt + ' ' + s.blackUnderline} // проверьте, рабоет ли смешивание классов
                 />
 
                 {/*----------------------------------------------------*/}
 
-                <SuperButton>
-                    default
+                <SuperButton className={f.Greeting__btn}>
+                    Default button
                 </SuperButton>
 
                 <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
+                    className={f.Greeting__btn}
+                    red// пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
                 >
-                    delete {/*// название кнопки попадёт в children*/}
+                    Colored button {/*// название кнопки попадёт в children*/}
                 </SuperButton>
 
-                <SuperButton disabled>
+                <SuperButton
+                    className={f.Greeting__btn}
                     disabled
+                >
+                    Disabled button
                 </SuperButton>
 
                 {/*----------------------------------------------------*/}
@@ -59,6 +65,7 @@ function HW4() {
                 <SuperCheckbox
                     checked={checked}
                     onChangeChecked={setChecked}
+
                 >
                     some text {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
@@ -67,7 +74,7 @@ function HW4() {
                 <SuperCheckbox checked={checked} onChange={testOnChange}/>
             </div>
 
-            <hr/>
+
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperInputText/>*/}
             {/*<AlternativeSuperButton/>*/}
