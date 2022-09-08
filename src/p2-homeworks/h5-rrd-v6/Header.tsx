@@ -41,14 +41,14 @@ function Header() {
                 </ul>
 
                     <button className={`${h.nav_btn} + ${h.nav_close_btn}`}>
-                        <FaTimes onClick={showNavbar}/>
+                        <FaTimes onClick={()=>showNavbar()}/>
                     </button>
                     </div>
 
 
 
                 <button className={`${h.nav_btn}`}>
-                    <FaBars onClick={showNavbar}/>
+                    <FaBars onClick={()=>showNavbar()}/>
                 </button>
             </nav>
 

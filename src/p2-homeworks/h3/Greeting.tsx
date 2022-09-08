@@ -28,19 +28,21 @@ const Greeting: React.FC<GreetingPropsType> = (
         )
     })
 
-    return (<div>
-            <div className={s.Greeting__Container}>
-                {/*<input value={name} onChange={setNameCallback} className={inputClass} onKeyDown={onKeyAddUser}/>*/}
+    return (<div className={s.Greeting__Container}>
+
+
+                <div>
+                    <SuperButton className={s.Greeting__btn}  onClick={addUser}>add</SuperButton>
+                    <span> Users Count: {totalUsers}</span>
+                </div>
+
+
                 <SuperInputText  value={name} onChange={setNameCallback} className={inputClass} onKeyDown={onKeyAddUser}></SuperInputText>
-                <span>{error}</span>
-                {/*<button className={s.Greeting__btn} onClick={addUser}>add</button>*/}
-                <SuperButton className={s.Greeting__btn}  onClick={addUser}>add</SuperButton>
-                <span> Users Count: {totalUsers}</span>
+
+                <span className={s.Users__list}>{totalUsers > 0 ? usersList : 'User list is empty'}</span>
+
             </div>
-            <div className={s.Users__list}>
-                <span>{totalUsers > 0 ? usersList : 'User list is empty'}</span>
-            </div>
-        </div>
+
 
     )
 }
