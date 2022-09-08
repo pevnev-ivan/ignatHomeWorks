@@ -6,7 +6,7 @@ import {FaBars, FaTimes} from 'react-icons/fa'
 
 function Header() {
 
-    const navRef = useRef<HTMLInputElement>(null)
+    const navRef = useRef<HTMLDivElement>(null)
 
     const showNavbar = () => {
         navRef.current && navRef.current.classList.toggle(h.responsive_nav)
@@ -15,8 +15,9 @@ function Header() {
 
     return (
         <header>
-            <nav ref={navRef}>
+            <nav>
                 <span className={h.logo}>React HomeWorks</span>
+                <div className={h.responsivePart} ref={navRef}>
 
                 <ul className={h.navLinksContainer}>
                     <li>
@@ -39,15 +40,18 @@ function Header() {
                     </li>
                 </ul>
 
+                    <button className={`${h.nav_btn} + ${h.nav_close_btn}`}>
+                        <FaTimes onClick={showNavbar}/>
+                    </button>
+                    </div>
 
-                <button className={`${h.nav_btn} + ${h.nav_close_btn}`}>
-                    <FaTimes onClick={showNavbar}/>
+
+
+                <button className={`${h.nav_btn}`}>
+                    <FaBars onClick={showNavbar}/>
                 </button>
-
             </nav>
-            <button className={`${h.nav_btn}`}>
-                <FaBars onClick={showNavbar}/>
-            </button>
+
         </header>
     )
 }
