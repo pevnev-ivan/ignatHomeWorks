@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './pages.module.css'
+import HW6 from "../../h6/HW6";
 
 function Junior() {
     return (
@@ -9,8 +10,7 @@ function Junior() {
             paddingTop: "35vh"
         }}
         >
-
-            Work in progress 🚀
+            <HW6/>
 
         </div>
     )

@@ -10,7 +10,7 @@ function JuniorPlus() {
              }}
         >
 
-            Work in progress 🚀
+            Work in progress <span role={"img"} aria-label={'rocket'}>🚀</span>
 
         </div>
     )

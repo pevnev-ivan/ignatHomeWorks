@@ -49,7 +49,18 @@
     width: 15rem;
     padding: 7px 15px;
     font-size: 20px;
+}
 
+.Editable__Span {
+    all: unset;
+    text-decoration-line: underline;
+    display:inline-block;
+    text-align: center;
+    border: 2px solid #48403b;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
 }
 
 .Users__list{

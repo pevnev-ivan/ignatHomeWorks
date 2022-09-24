@@ -1,0 +1,11 @@
+.affairs__containerAll {
+    margin: 20px;
+}
+
+.affairs__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-items: center;
+
+}

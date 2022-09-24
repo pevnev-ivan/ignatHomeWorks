@@ -12,8 +12,6 @@
     display: grid;
     grid-template-columns: 60px auto;
     grid-gap: 10px;
-
-
 }
 
 .message {
@@ -33,7 +31,7 @@
     position: absolute;
     border-bottom: 20px solid transparent;
     border-right: 20px solid #ddd;
-    bottom: 0%;
+    bottom: 0;
     left: -3.7%;
     content: '';
     transform: rotate(90deg);
@@ -49,10 +47,8 @@
     float: left;
     max-width: 47px;
     width: 100%;
-    margin-right: 20px;
     border-radius: 50%;
     margin: 10px 0;
-
 }
 
 .avatarContainer {
