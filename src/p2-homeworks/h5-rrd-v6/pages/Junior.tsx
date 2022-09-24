@@ -1,19 +1,22 @@
 import React from 'react'
-import HW1 from '../../h1/HW1'
-import HW2 from '../../h2/HW2'
-import HW3 from '../../h3/HW3'
-import HW4 from '../../h4/HW4'
+import s from './pages.module.css'
 
-function PreJunior() {
+function Junior() {
     return (
-        <div>
-           Work in progress
+        <div className={s.contentContainer}
+        style={{height: "100%", display: "flex",
+        alignItems: "center", justifyContent: "center",
+            paddingTop: "35vh"
+        }}
+        >
+
+            Work in progress 🚀
 
         </div>
     )
 }
 
-export default PreJunior
+export default Junior
 
 // сделайте по аналогии пустые страницы джун и джун+
 // туда будут добавляться следующие дз
