@@ -4,6 +4,7 @@ import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import {restoreState, saveState} from './localStorage/localStorage'
 import s from '../h3/Greeting.module.css'
 import f from '../../p1-main/m1-ui/u1-app/containers.module.css'
+
 function HW6() {
     const [value, setValue] = useState<string>('Editable Span & local storage')
 
@@ -22,7 +23,7 @@ function HW6() {
 
     return (
         <div className={f.affairs__container}>
-            <h1>homeworks 6</h1>
+            <h1>HomeWork 6</h1>
 
             {/*should work (должно работать)*/}
             <div >

@@ -1,23 +1,25 @@
 import React, {useState} from 'react'
 import SuperSelect from './common/c5-SuperSelect/SuperSelect'
 import SuperRadio from './common/c6-SuperRadio/SuperRadio'
+// import s from '../h3/Greeting.module.css'
+import f from '../../p1-main/m1-ui/u1-app/containers.module.css'
 
 const arr = ['x', 'y', 'z']
 
 function HW7() {
-    const [value, onChangeOption] = useState(arr[1])
+    const [value, setValue] = useState(arr[1])
 
     return (
-        <div>
-            <hr/>
-            homeworks 7
+        <div className={f.affairs__container}>
 
-            {/*should work (должно работать)*/}
+            <h1>HomeWork 7</h1>
+
+            {/*should work*/}
             <div>
                 <SuperSelect
                     options={arr}
                     value={value}
-                    onChangeOption={onChangeOption}
+                    setValue={setValue}
                 />
             </div>
             <div>
@@ -25,15 +27,15 @@ function HW7() {
                     name={'radio'}
                     options={arr}
                     value={value}
-                    onChangeOption={onChangeOption}
+                    setValue={setValue}
                 />
             </div>
 
-            <hr/>
+
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperSelect/>*/}
             {/*<AlternativeSuperRadio/>*/}
-            <hr/>
+
         </div>
     )
 }
